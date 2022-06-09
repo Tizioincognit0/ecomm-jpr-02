@@ -1,0 +1,48 @@
+<h1>ASSOCIA CATEGORIA</h1>
+<br>
+<div class="check-element animate-show-hide" *ngIf="searchState">
+    <input type="text" [(ngModel)]="ricerca.ricerca" placeholder="Cerca prodotto">
+    <button (click)="cercaProdotto()">Cerca</button>
+</div>
+<br>
+<h3 *ngIf="associaStato">Prodotto selezionato: {{prodotto.codice}} - {{prodotto.descrizione}}</h3>
+
+<table *ngIf="srvProdotto.listaProdotti.length > 0">
+    <thead>
+        <tr>
+            <th>Codice</th>
+            <th>Descrizione</th>
+            <th>Peso</th>
+            <th>Prezzo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let item of srvProdotto.listaProdotti ">
+            <td>{{item.codice}}</td>
+            <td>{{item.descrizione}}</td>
+            <td>{{item.peso}} kg</td>
+            <td>€ {{item.prezzo}}</td>
+            <td><button (click)="seleziona(item)">Seleziona</button></td>
+        </tr>
+    </tbody>
+</table>
+<h3 *ngIf="srvProdotto.listaProdotti.length === 0">Nessun prodotto disponibile</h3>
+<br>
+<h3 *ngIf="associativa">Categoria da associare</h3>
+<table *ngIf="associativa">
+    <thead>
+        <tr>
+            <th>Descrizione</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let categoriaDaSelezionare of srvCategoria.categorie">
+            <td>{{categoriaDaSelezionare.descrizione}}</td>
+            <td *ngIf="prodotto.categoria == null || prodotto.categoria.id != categoriaDaSelezionare.id; else other_content"><button (click)="chiediAssocia(categoriaDaSelezionare, prodotto)">Associa</button></td>
+            <ng-template #other_content>
+                <td><button (click)="chiediAssocia(categoriaDaSelezionare, prodotto)" disabled>Associa</button></td>
+            </ng-template>
+        </tr>
+    </tbody>
+</table>
