@@ -15,10 +15,10 @@ export class AppComponent {
   }
 
   anagrafiche(){
-    this.router.navigateByUrl('anagrafiche-crud')
+    this.router.navigateByUrl('/anagrafiche-crud')
   }
 
   carrello(){
-    this.router.navigateByUrl('carrello-crud')
+    this.router.navigateByUrl('/carrello-crud')
   }
 }

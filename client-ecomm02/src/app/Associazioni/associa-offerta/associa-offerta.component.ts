@@ -1,8 +1,8 @@
 import { OffertaService } from 'src/app/service/offerta.service';
 import { ProdottoService } from 'src/app/service/prodotto.service';
-import { AssociaOffertaService } from './../../associazioni-service/associa-offerta.service';
-import { RicercaDto } from './../../dto/ricerca-dto';
-import { Offerta } from './../../model/offerta';
+import { AssociaOffertaService } from '../../associazioni-service/associa-offerta.service';
+import { RicercaDto } from '../../dto/ricerca-dto';
+import { Offerta } from '../../model/offerta';
 import { Component, OnInit } from '@angular/core';
 import { Prodotto } from 'src/app/model/prodotto';
 
