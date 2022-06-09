@@ -1,3 +1,4 @@
+import { AnagraficheCrudComponent } from './anagrafiche-crud/anagrafiche-crud.component';
 import { AssociaImballoComponent } from './associazioni/associa-imballo/associa-imballo.component';
 import { AssociaColoreComponent } from './associazioni/associa-colore/associa-colore.component';
 import { TagliaCrudComponent } from './taglia-crud/taglia-crud.component';
@@ -15,8 +16,10 @@ import { AssociaTagliaComponent } from './associazioni/associa-taglia/associa-ta
 import { AssociaOffertaComponent } from './associazioni/associa-offerta/associa-offerta.component';
 import { AssociaSpedizioneComponent } from './associazioni/associa-spedizione/associa-spedizione.component';
 
+
 const routes: Routes = [
   { path: 'home-crud', component: HomeCRUDComponent},
+  { path: 'anagrafiche-crud', component: AnagraficheCrudComponent},
   { path: 'imballo-crud', component: ImballoCrudComponent},
   { path: 'categoria-crud', component: CategoriaCRUDComponent },
   { path: 'colore-crud', component: ColoreCrudComponent},

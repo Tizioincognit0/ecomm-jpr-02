@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AssociaImballoComponent } from './associa-imballo.component';
+import { AnagraficheCrudComponent } from './anagrafiche-crud.component';
 
-describe('AssociaImballoComponent', () => {
-  let component: AssociaImballoComponent;
-  let fixture: ComponentFixture<AssociaImballoComponent>;
+describe('AnagraficheCrudComponent', () => {
+  let component: AnagraficheCrudComponent;
+  let fixture: ComponentFixture<AnagraficheCrudComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AssociaImballoComponent ]
+      declarations: [ AnagraficheCrudComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AssociaImballoComponent);
+    fixture = TestBed.createComponent(AnagraficheCrudComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

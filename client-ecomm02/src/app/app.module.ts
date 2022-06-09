@@ -18,6 +18,7 @@ import { AssociaTagliaComponent } from './associazioni/associa-taglia/associa-ta
 import { AssociaImballoComponent } from './associazioni/associa-imballo/associa-imballo.component';
 import { AssociaOffertaComponent } from './associazioni/associa-offerta/associa-offerta.component';
 import { AssociaSpedizioneComponent } from './associazioni/associa-spedizione/associa-spedizione.component';
+import { AnagraficheCrudComponent } from './anagrafiche-crud/anagrafiche-crud.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AssociaSpedizioneComponent } from './associazioni/associa-spedizione/as
     AssociaTagliaComponent,
     AssociaOffertaComponent,
     AssociaImballoComponent,
-    AssociaSpedizioneComponent
+    AssociaSpedizioneComponent,
+    AnagraficheCrudComponent
   ],
   imports: [
 
