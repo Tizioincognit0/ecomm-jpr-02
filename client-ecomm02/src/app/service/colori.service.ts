@@ -25,10 +25,10 @@ export class ColoriService {
     });
 
   }
-/* Passa al server il Dto (colorepuñ essere cercato solo per colore)contenete
+/* Passa al server il Dto (colore può essere cercato solo per colore)contenete
 la stringa da cercare posiziona i dati nella Lista aposita,
-restituisce una istanza di ColoreDtoa per resettare il campo
-nel Tamplate*/
+restituisce una istanza di ColoreDto per resettare il campo
+nel template */
   cerca(colore: Colore) {
     if (colore.colore == null) {
       this.lista();
@@ -42,10 +42,10 @@ nel Tamplate*/
     }
     return new Colore();
   }
-  /* in Base alla stato del componente che riceve come parametro setta url per la
-richiesta e invia al server l'istanza da trattare. restituisce la stringa
- per ripristinare lo stato iniziale del component*/
-  conferma(state: string) {
+/* In base alla stato del componente che riceve come parametro setta url per la
+richiesta e invia al server l'istanza da trattare. Restituisce la stringa
+ per ripristinare lo stato iniziale del component */
+  conferma(state: string): string {
     let urlEnd: string;
     this.coloreDto.colore = this.coloreForm;
     this.coloreDto.token = this.srvToken.token;
